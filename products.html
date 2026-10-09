@@ -4,203 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products — NOVA</title>
-  <meta name="description" content="Explore the full NOVA smartphone lineup — from flagship powerhouses to compact essentials.">
+  <meta name="description" content="Explore the full NOVA smartphone lineup.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Lora:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">NOVA</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="products.html" class="nav-link active">Products</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="contact.html" class="btn btn-primary">Shop Now</a>
-        <button class="nav-toggle" aria-label="Toggle menu">
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <nav>
+        <ul class="masthead-nav">
+          <li><a href="index.html" class="masthead-link">Home</a></li>
+          <li><a href="products.html" class="masthead-link">Products</a></li>
+          <li><a href="about.html" class="masthead-link">About</a></li>
+          <li><a href="contact.html" class="masthead-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="masthead-logo">NOVA</a>
+      <div class="masthead-right">
+        <a href="contact.html" class="btn btn-primary" style="padding: 0.625rem 1.25rem; font-size: 0.8125rem;">Subscribe</a>
+        <button class="masthead-toggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- Page Hero -->
   <section class="page-hero">
-    <div class="container page-hero-content">
-      <div class="section-label" style="justify-content: center;">Our Products</div>
-      <h1>The NOVA <span class="text-gradient">Lineup</span></h1>
+    <div class="container">
+      <div class="eyebrow">Products</div>
+      <h1>The NOVA Lineup</h1>
       <p>Every NOVA smartphone is designed with purpose — powerful performance, stunning design, and technology that adapts to you.</p>
     </div>
   </section>
 
-  <!-- Products Grid -->
-  <section class="section" style="padding-top: 0;">
+  <!-- Story Grid -->
+  <section class="story-section">
     <div class="container">
-      <div class="products-grid">
-        <div class="product-card tilt-card reveal">
-          <div class="product-card-content">
-            <div class="product-card-image">
-              <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&h=560&fit=crop&q=80" alt="NOVA X1 Pro" loading="lazy">
-            </div>
-            <span class="product-card-tag">Flagship</span>
-            <h3 class="product-card-name">NOVA X1 Pro</h3>
-            <p class="product-card-desc">The ultimate expression of smartphone technology. 200MP AI camera, 120Hz AMOLED, and the most powerful chip ever in a NOVA.</p>
-            <div class="product-card-price">$999 <span>starting</span></div>
-            <a href="product-detail.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%; justify-content: center;">Learn More</a>
+      <div class="story-grid">
+        <article class="story-card">
+          <div class="story-card-image">
+            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=700&h=525&fit=crop&q=80" alt="NOVA X1 Pro" loading="lazy">
           </div>
-        </div>
+          <h3>NOVA X1 Pro</h3>
+          <p>The ultimate expression of smartphone technology. 200MP AI camera, 120Hz AMOLED, and the most powerful chip ever in a NOVA.</p>
+          <a href="product-detail.html" class="btn btn-outline" style="margin-top: var(--space-md);">Learn More</a>
+        </article>
 
-        <div class="product-card tilt-card reveal reveal-delay-1">
-          <div class="product-card-content">
-            <div class="product-card-image">
-              <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=600&h=560&fit=crop&q=80" alt="NOVA X1" loading="lazy">
-            </div>
-            <span class="product-card-tag">Popular</span>
-            <h3 class="product-card-name">NOVA X1</h3>
-            <p class="product-card-desc">Flagship performance at a smart price. 108MP camera, 90Hz display, and all-day battery life.</p>
-            <div class="product-card-price">$699 <span>starting</span></div>
-            <a href="product-detail.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%; justify-content: center;">Learn More</a>
+        <article class="story-card">
+          <div class="story-card-image">
+            <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=700&h=525&fit=crop&q=80" alt="NOVA X1" loading="lazy">
           </div>
-        </div>
+          <h3>NOVA X1</h3>
+          <p>Flagship performance at a smart price. 108MP camera, 90Hz display, and all-day battery life.</p>
+          <a href="product-detail.html" class="btn btn-outline" style="margin-top: var(--space-md);">Learn More</a>
+        </article>
 
-        <div class="product-card tilt-card reveal reveal-delay-2">
-          <div class="product-card-content">
-            <div class="product-card-image">
-              <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=600&h=560&fit=crop&q=80" alt="NOVA Mini" loading="lazy">
-            </div>
-            <span class="product-card-tag">Compact</span>
-            <h3 class="product-card-name">NOVA Mini</h3>
-            <p class="product-card-desc">Big power, small footprint. Perfect for one-handed use without compromising on performance.</p>
-            <div class="product-card-price">$499 <span>starting</span></div>
-            <a href="product-detail.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%; justify-content: center;">Learn More</a>
+        <article class="story-card">
+          <div class="story-card-image">
+            <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=700&h=525&fit=crop&q=80" alt="NOVA Mini" loading="lazy">
           </div>
-        </div>
+          <h3>NOVA Mini</h3>
+          <p>Big power, small footprint. Perfect for one-handed use without compromising on performance.</p>
+          <a href="product-detail.html" class="btn btn-outline" style="margin-top: var(--space-md);">Learn More</a>
+        </article>
 
-        <div class="product-card tilt-card reveal">
-          <div class="product-card-content">
-            <div class="product-card-image">
-              <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?w=600&h=560&fit=crop&q=80" alt="NOVA X1 Pro Max" loading="lazy">
-            </div>
-            <span class="product-card-tag">Coming Soon</span>
-            <h3 class="product-card-name">NOVA X1 Pro Max</h3>
-            <p class="product-card-desc">The biggest, boldest NOVA ever. 6.9" display, 5,500mAh battery, and desktop-class performance.</p>
-            <div class="product-card-price">$1,199 <span>starting</span></div>
-            <a href="product-detail.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">Notify Me</a>
+        <article class="story-card">
+          <div class="story-card-image">
+            <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?w=700&h=525&fit=crop&q=80" alt="NOVA X1 Pro Max" loading="lazy">
           </div>
-        </div>
+          <h3>NOVA X1 Pro Max</h3>
+          <p>The biggest, boldest NOVA ever. 6.9" display, 5,500mAh battery, and desktop-class performance.</p>
+          <a href="product-detail.html" class="btn btn-outline" style="margin-top: var(--space-md);">Learn More</a>
+        </article>
 
-        <div class="product-card tilt-card reveal reveal-delay-1">
-          <div class="product-card-content">
-            <div class="product-card-image">
-              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=560&fit=crop&q=80" alt="NOVA Watch" loading="lazy">
-            </div>
-            <span class="product-card-tag">Wearable</span>
-            <h3 class="product-card-name">NOVA Watch</h3>
-            <p class="product-card-desc">Your health companion. Advanced sensors, 14-day battery, and seamless NOVA integration.</p>
-            <div class="product-card-price">$299 <span>starting</span></div>
-            <a href="product-detail.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">Learn More</a>
+        <article class="story-card">
+          <div class="story-card-image">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700&h=525&fit=crop&q=80" alt="NOVA Watch" loading="lazy">
           </div>
-        </div>
+          <h3>NOVA Watch</h3>
+          <p>Your health companion. Advanced sensors, 14-day battery, and seamless NOVA integration.</p>
+          <a href="product-detail.html" class="btn btn-outline" style="margin-top: var(--space-md);">Learn More</a>
+        </article>
 
-        <div class="product-card tilt-card reveal reveal-delay-2">
-          <div class="product-card-content">
-            <div class="product-card-image">
-              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=560&fit=crop&q=80" alt="NOVA Buds Pro" loading="lazy">
-            </div>
-            <span class="product-card-tag">Audio</span>
-            <h3 class="product-card-name">NOVA Buds Pro</h3>
-            <p class="product-card-desc">Immersive sound with adaptive ANC. Spatial audio, 36-hour battery, and crystal-clear calls.</p>
-            <div class="product-card-price">$199 <span>starting</span></div>
-            <a href="product-detail.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">Learn More</a>
+        <article class="story-card">
+          <div class="story-card-image">
+            <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=700&h=525&fit=crop&q=80" alt="NOVA Buds Pro" loading="lazy">
           </div>
-        </div>
+          <h3>NOVA Buds Pro</h3>
+          <p>Immersive sound with adaptive ANC. Spatial audio, 36-hour battery, and crystal-clear calls.</p>
+          <a href="product-detail.html" class="btn btn-outline" style="margin-top: var(--space-md);">Learn More</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Comparison Section -->
-  <section class="section features-section">
+  <!-- Comparison Table -->
+  <section class="specs-section">
     <div class="container">
-      <div class="section-label reveal">Compare</div>
-      <h2 class="section-title reveal reveal-delay-1">Find Your <span class="text-gradient">Perfect Match</span></h2>
-      <p class="section-subtitle reveal reveal-delay-2">Compare specs side by side to find the NOVA that fits your needs and budget.</p>
+      <div class="eyebrow">Compare</div>
+      <h2>Find Your Perfect Match</h2>
 
-      <div style="overflow-x: auto; margin-top: var(--space-2xl);">
-        <table class="specs-table reveal">
-          <tr>
-            <td>Model</td>
-            <td><strong>X1 Pro</strong></td>
-            <td><strong>X1</strong></td>
-            <td><strong>Mini</strong></td>
-          </tr>
-          <tr>
-            <td>Display</td>
-            <td>6.7" AMOLED 120Hz</td>
-            <td>6.5" AMOLED 90Hz</td>
-            <td>5.8" AMOLED 60Hz</td>
-          </tr>
-          <tr>
-            <td>Processor</td>
-            <td>NOVA Fusion 3</td>
-            <td>NOVA Fusion 2</td>
-            <td>NOVA Fusion 2</td>
-          </tr>
-          <tr>
-            <td>Camera</td>
-            <td>200MP + 50MP + 12MP</td>
-            <td>108MP + 12MP</td>
-            <td>64MP + 12MP</td>
-          </tr>
-          <tr>
-            <td>Battery</td>
-            <td>5,000mAh</td>
-            <td>4,800mAh</td>
-            <td>4,000mAh</td>
-          </tr>
-          <tr>
-            <td>Charging</td>
-            <td>100W Wired / 50W Wireless</td>
-            <td>65W Wired / 30W Wireless</td>
-            <td>45W Wired / 15W Wireless</td>
-          </tr>
-          <tr>
-            <td>Storage</td>
-            <td>256GB / 512GB / 1TB</td>
-            <td>128GB / 256GB</td>
-            <td>128GB / 256GB</td>
-          </tr>
-          <tr>
-            <td>Price</td>
-            <td>From $999</td>
-            <td>From $699</td>
-            <td>From $499</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2 class="reveal">Cannot Decide? <span class="text-gradient">We Will Help.</span></h2>
-        <p class="reveal reveal-delay-1">Our team of experts can help you find the perfect NOVA for your lifestyle and budget.</p>
-        <div class="cta-buttons reveal reveal-delay-2">
-          <a href="contact.html" class="btn btn-primary">Talk to an Expert</a>
-          <a href="index.html" class="btn btn-secondary">Back to Home</a>
-        </div>
-      </div>
+      <table class="specs-table">
+        <tr><td>Model</td><td><strong>X1 Pro</strong></td><td><strong>X1</strong></td><td><strong>Mini</strong></td></tr>
+        <tr><td>Display</td><td>6.7" AMOLED 120Hz</td><td>6.5" AMOLED 90Hz</td><td>5.8" AMOLED 60Hz</td></tr>
+        <tr><td>Processor</td><td>NOVA Fusion 3</td><td>NOVA Fusion 2</td><td>NOVA Fusion 2</td></tr>
+        <tr><td>Camera</td><td>200MP + 50MP + 12MP</td><td>108MP + 12MP</td><td>64MP + 12MP</td></tr>
+        <tr><td>Battery</td><td>5,000mAh</td><td>4,800mAh</td><td>4,000mAh</td></tr>
+        <tr><td>Charging</td><td>100W / 50W Wireless</td><td>65W / 30W Wireless</td><td>45W / 15W Wireless</td></tr>
+        <tr><td>Storage</td><td>256GB / 512GB / 1TB</td><td>128GB / 256GB</td><td>128GB / 256GB</td></tr>
+        <tr><td>Price</td><td>From $999</td><td>From $699</td><td>From $499</td></tr>
+      </table>
     </div>
   </section>
 
@@ -210,13 +131,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">NOVA</div>
-          <p>Future in Your Hands. Crafting innovative smartphone technology that empowers you to do more, see more, and be more.</p>
-          <div class="footer-social">
-            <a href="#" class="footer-social-link" aria-label="Twitter">X</a>
-            <a href="#" class="footer-social-link" aria-label="Instagram">IG</a>
-            <a href="#" class="footer-social-link" aria-label="YouTube">YT</a>
-            <a href="#" class="footer-social-link" aria-label="LinkedIn">LI</a>
-          </div>
+          <p>Future in Your Hands. Crafting innovative smartphone technology.</p>
         </div>
         <div class="footer-column">
           <h4>Products</h4>
@@ -247,11 +162,10 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="footer-copyright">&copy; <span class="dynamic-year">2025</span> NOVA Technologies. All rights reserved.</div>
+        <div class="footer-copyright">&copy; 2026 NOVA Technologies. All rights reserved.</div>
         <div class="footer-legal">
           <a href="#" class="footer-legal-link">Privacy Policy</a>
           <a href="#" class="footer-legal-link">Terms of Service</a>
-          <a href="#" class="footer-legal-link">Cookie Policy</a>
         </div>
       </div>
     </div>
