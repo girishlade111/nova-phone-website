@@ -61,7 +61,7 @@
   --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
   /* Transitions */
---ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
   --duration-fast: 0.2s;
   --duration-normal: 0.4s;
@@ -471,92 +471,30 @@ img {
   animation: fadeIn 1s var(--ease-out-expo) 0.5s both;
 }
 
-/* Phone Mockup */
+/* Phone Mockup with Real Image */
 .phone-mockup {
   position: relative;
-  width: 280px;
-  height: 560px;
-  background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
-  border-radius: 40px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  width: 320px;
+  height: 620px;
+  border-radius: 44px;
+  overflow: hidden;
   box-shadow:
     0 50px 100px rgba(0, 0, 0, 0.6),
     0 0 80px rgba(124, 92, 255, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  overflow: hidden;
   animation: phoneFloat 6s ease-in-out infinite;
+  border: 3px solid rgba(255, 255, 255, 0.12);
 }
 
-.phone-mockup::before {
-  content: '';
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 28px;
-  background: #000;
-  border-radius: var(--radius-full);
-  z-index: 2;
+.phone-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
 }
 
-.phone-screen {
-  position: absolute;
-  inset: 8px;
-  border-radius: 32px;
-  background: linear-gradient(180deg, #1a1040 0%, #0d0d1f 100%);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-md);
-}
-
-.phone-screen-content {
-  text-align: center;
-  padding: var(--space-md);
-}
-
-.phone-screen-time {
-  font-family: var(--font-display);
-  font-size: 3.5rem;
-  font-weight: 700;
-  background: var(--gradient-hero);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.phone-screen-date {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-  margin-top: var(--space-xs);
-}
-
-.phone-screen-icons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-sm);
-  margin-top: var(--space-lg);
-}
-
-.phone-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  background: var(--color-surface-glass);
-  border: 1px solid var(--color-border);
-  transition: all var(--duration-fast);
-}
-
-.phone-icon:hover {
-  transform: scale(1.1);
-  border-color: var(--color-accent);
+.phone-mockup:hover img {
+  transform: scale(1.05);
 }
 
 /* Floating Elements Around Phone */
@@ -574,6 +512,7 @@ img {
   gap: 0.5rem;
   box-shadow: var(--shadow-md);
   animation: floatElement 4s ease-in-out infinite;
+  z-index: 2;
 }
 
 .float-element-1 {
@@ -683,37 +622,22 @@ img {
 
 .product-card-image {
   width: 100%;
-  height: 240px;
+  height: 260px;
   border-radius: var(--radius-md);
   margin-bottom: var(--space-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  position: relative;
   overflow: hidden;
-}
-
-.product-card-image-inner {
-  width: 120px;
-  height: 240px;
-  border-radius: 24px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   position: relative;
-  overflow: hidden;
-  transition: transform var(--duration-normal) var(--ease-out-expo);
 }
 
-.product-card:hover .product-card-image-inner {
-  transform: scale(1.05) rotate(-2deg);
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
 }
 
-.product-card-image-inner::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+.product-card:hover .product-card-image img {
+  transform: scale(1.08);
 }
 
 .product-card-tag {
@@ -832,10 +756,10 @@ img {
 }
 
 .showcase-phone {
-  width: 300px;
-  height: 600px;
-  border-radius: 44px;
-  border: 3px solid rgba(255, 255, 255, 0.1);
+  width: 320px;
+  height: 640px;
+  border-radius: 48px;
+  border: 3px solid rgba(255, 255, 255, 0.12);
   background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
   box-shadow: 0 60px 120px rgba(0, 0, 0, 0.6), 0 0 100px rgba(124, 92, 255, 0.2);
   position: relative;
@@ -843,69 +767,10 @@ img {
   animation: phoneFloat 8s ease-in-out infinite;
 }
 
-.showcase-phone-screen {
-  position: absolute;
-  inset: 10px;
-  border-radius: 34px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.showcase-camera-feed {
-  flex: 1;
-  background: linear-gradient(180deg, #1a1040, #0d0d1f);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.showcase-camera-feed::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 30% 40%, rgba(124, 92, 255, 0.3) 0%, transparent 40%),
-    radial-gradient(circle at 70% 60%, rgba(74, 227, 255, 0.2) 0%, transparent 40%);
-}
-
-.showcase-camera-icon {
-  font-size: 4rem;
-  z-index: 1;
-}
-
-.showcase-controls {
-  padding: var(--space-md);
-  display: flex;
-  justify-content: center;
-  gap: var(--space-md);
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-}
-
-.showcase-control-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  background: var(--color-surface-glass);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: all var(--duration-fast);
-}
-
-.showcase-control-btn:hover {
-  border-color: var(--color-accent);
-  background: var(--color-accent-glow);
-}
-
-.showcase-control-btn.active {
-  background: var(--gradient-hero);
-  border-color: transparent;
+.showcase-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .showcase-content h2 {
@@ -1248,10 +1113,10 @@ img {
 }
 
 .product-detail-phone {
-  width: 320px;
-  height: 640px;
-  border-radius: 48px;
-  border: 3px solid rgba(255, 255, 255, 0.1);
+  width: 340px;
+  height: 680px;
+  border-radius: 52px;
+  border: 3px solid rgba(255, 255, 255, 0.12);
   background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
   box-shadow: 0 80px 160px rgba(0, 0, 0, 0.6), 0 0 120px rgba(124, 92, 255, 0.2);
   position: relative;
@@ -1259,17 +1124,10 @@ img {
   animation: phoneFloat 8s ease-in-out infinite;
 }
 
-.product-detail-screen {
-  position: absolute;
-  inset: 12px;
-  border-radius: 36px;
-  overflow: hidden;
-  background: linear-gradient(180deg, #1a1040 0%, #0d0d1f 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-md);
+.product-detail-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .product-detail-info h1 {
@@ -1387,23 +1245,16 @@ img {
 
 .about-image-placeholder {
   width: 100%;
-  height: 400px;
+  height: 420px;
   border-radius: var(--radius-lg);
-  background: var(--gradient-mesh);
-  border: 1px solid var(--color-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5rem;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
-.about-image-placeholder::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(124, 92, 255, 0.2), transparent);
+.about-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-content h2 {
@@ -1652,8 +1503,8 @@ img {
   }
 
   .phone-mockup {
-    width: 220px;
-    height: 440px;
+    width: 240px;
+    height: 480px;
   }
 
   .products-grid {
@@ -1749,38 +1600,11 @@ img {
   .product-specs {
     grid-template-columns: 1fr;
   }
-}
 
-/* ---------- Toast Notifications ---------- */
-.toast {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 1rem 1.5rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-md);
-  color: var(--color-text-primary);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  box-shadow: var(--shadow-lg);
-  z-index: 9999;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: all 0.4s var(--ease-out-expo);
-}
-
-.toast.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.toast-success {
-  border-color: #4ade80;
-}
-
-.toast-error {
-  border-color: #ef4444;
+  .showcase-phone {
+    width: 260px;
+    height: 520px;
+  }
 }
 
 /* ---------- Reduced Motion ---------- */

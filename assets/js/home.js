@@ -9,13 +9,6 @@ colorOptions.forEach(option => {
   option.addEventListener('click', () => {
     colorOptions.forEach(o => o.classList.remove('active'));
     option.classList.add('active');
-
-    // Update phone mockup gradient based on color
-    const phoneInner = document.querySelector('.product-card-image-inner');
-    if (phoneInner) {
-      const bg = option.style.background;
-      phoneInner.style.background = bg;
-    }
   });
 });
 
@@ -60,8 +53,8 @@ const phoneMockup = document.querySelector('.phone-mockup');
 
 if (phoneMockup) {
   document.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    const x = (e.clientX / window.innerWidth - 0.5) * 15;
+    const y = (e.clientY / window.innerHeight - 0.5) * 15;
     phoneMockup.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
   });
 
@@ -70,31 +63,30 @@ if (phoneMockup) {
   });
 }
 
-// ---------- Dynamic Time on Phone Screen ----------
-const timeElement = document.querySelector('.phone-screen-time');
-const dateElement = document.querySelector('.phone-screen-date');
+// ---------- Lazy Load Images with Fade-in ----------
+const images = document.querySelectorAll('img[loading="lazy"]');
 
-function updatePhoneTime() {
-  if (!timeElement || !dateElement) return;
+const imageObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.6s ease';
 
-  const now = new Date();
-  const hours = now.getHours();
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  timeElement.textContent = `${hours}:${minutes}`;
+      img.onload = () => {
+        img.style.opacity = '1';
+      };
 
-  const options = { weekday: 'long', month: 'long', day: 'numeric' };
-  dateElement.textContent = now.toLocaleDateString('en-US', options);
-}
+      // If already cached
+      if (img.complete) {
+        img.style.opacity = '1';
+      }
 
-updatePhoneTime();
-setInterval(updatePhoneTime, 1000);
-
-// ---------- Showcase Control Buttons ----------
-const controlBtns = document.querySelectorAll('.showcase-control-btn');
-
-controlBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    controlBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+      imageObserver.unobserve(img);
+    }
   });
+}, {
+  rootMargin: '100px 0px'
 });
+
+images.forEach(img => imageObserver.observe(img));
