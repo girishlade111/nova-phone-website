@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — NOVA Technologies</title>
+  <meta name="description" content="Get in touch with NOVA — we're here to help with orders, support, partnerships, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">NOVA</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="products.html" class="btn btn-primary">Shop Now</a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <div class="section-label" style="justify-content: center;">Get in Touch</div>
+      <h1>Contact <span class="text-gradient">Us</span></h1>
+      <p>Have a question, need support, or want to partner with us? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-info-card reveal">
+            <h4>📧 Email Us</h4>
+            <p>General inquiries: hello@nova.tech<br>Support: support@nova.tech<br>Press: press@nova.tech</p>
+          </div>
+          <div class="contact-info-card reveal reveal-delay-1">
+            <h4>📞 Call Us</h4>
+            <p>Toll-free: 1-800-NOVA-TECH<br>International: +1-555-0123<br>Mon–Fri, 9am–6pm EST</p>
+          </div>
+          <div class="contact-info-card reveal reveal-delay-2">
+            <h4>📍 Visit Us</h4>
+            <p>NOVA Headquarters<br>100 Innovation Drive<br>San Francisco, CA 94105</p>
+          </div>
+          <div class="contact-info-card reveal reveal-delay-3">
+            <h4>💬 Live Chat</h4>
+            <p>Chat with our support team in real-time. Available 24/7 for urgent inquiries.</p>
+          </div>
+        </div>
+
+        <div class="contact-form reveal reveal-delay-1">
+          <h3 style="margin-bottom: var(--space-md);">Send Us a Message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-input" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-input" placeholder="Doe" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <input type="text" id="subject" class="form-input" placeholder="How can we help?" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" class="form-textarea" placeholder="Tell us more about your inquiry..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Placeholder -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="about-image-placeholder reveal" style="height: 350px; font-size: 3rem;">
+        📍
+        <span style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 1rem; color: var(--color-text-muted); white-space: nowrap;">NOVA HQ — San Francisco, CA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section features-section">
+    <div class="container">
+      <div class="section-label reveal">FAQ</div>
+      <h2 class="section-title reveal reveal-delay-1">Frequently Asked <span class="text-gradient">Questions</span></h2>
+
+      <div class="features-grid" style="margin-top: var(--space-xl);">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🚚</div>
+          <div>
+            <h4>Shipping & Delivery</h4>
+            <p>Free standard shipping on all orders. Express delivery available for $19. Orders ship within 24 hours.</p>
+          </div>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon">↩️</div>
+          <div>
+            <h4>Returns & Exchanges</h4>
+            <p>30-day hassle-free returns. If you're not love it, send it back for a full refund.</p>
+          </div>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon">🔧</div>
+          <div>
+            <h4>Warranty & Repairs</h4>
+            <p>5-year comprehensive warranty on all NOVA devices. Free repairs for manufacturing defects.</p>
+          </div>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon">💳</div>
+          <div>
+            <h4>Payment Options</h4>
+            <p>We accept all major credit cards, PayPal, Apple Pay, Google Pay, and financing options.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">NOVA</div>
+          <p>Future in Your Hands. Crafting innovative smartphone technology that empowers you to do more, see more, and be more.</p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">▶</a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="product-detail.html" class="footer-link">NOVA X1 Pro</a></li>
+            <li><a href="product-detail.html" class="footer-link">NOVA X1</a></li>
+            <li><a href="product-detail.html" class="footer-link">NOVA Mini</a></li>
+            <li><a href="products.html" class="footer-link">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="about.html" class="footer-link">Careers</a></li>
+            <li><a href="about.html" class="footer-link">Press</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Help Center</a></li>
+            <li><a href="#" class="footer-link">Warranty</a></li>
+            <li><a href="#" class="footer-link">Repairs</a></li>
+            <li><a href="#" class="footer-link">Community</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">&copy; <span class="dynamic-year">2025</span> NOVA Technologies. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Contact form handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.textContent = 'Message Sent!';
+        btn.style.background = 'linear-gradient(135deg, #4ade80, #22c55e)';
+        this.reset();
+
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
