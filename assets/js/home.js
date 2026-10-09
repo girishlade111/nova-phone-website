@@ -53,8 +53,8 @@ const phoneMockup = document.querySelector('.phone-mockup');
 
 if (phoneMockup) {
   document.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 15;
-    const y = (e.clientY / window.innerHeight - 0.5) * 15;
+    const x = (e.clientX / window.innerWidth - 0.5) * 12;
+    const y = (e.clientY / window.innerHeight - 0.5) * 12;
     phoneMockup.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
   });
 
@@ -77,7 +77,6 @@ const imageObserver = new IntersectionObserver((entries) => {
         img.style.opacity = '1';
       };
 
-      // If already cached
       if (img.complete) {
         img.style.opacity = '1';
       }
